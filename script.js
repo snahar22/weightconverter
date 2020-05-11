@@ -6,25 +6,30 @@ const ouncesOutput = document.getElementById('ozOutput');
 const gramsOutput = document.getElementById('gOutput');
 const kilogramsOutput = document.getElementById('kgOutput');
 
+
 inputWeight.addEventListener('input', function(e){
   
     let chosenOption = weightOption;
     let weightValue = e.target.value;
 
 	if(chosenOption.selectedIndex == 0){
+
 		poundsOutput.innerHTML = weightValue;
 
 		kilogramsOutput.innerHTML = (weightValue / 2.2046).toFixed(2);
 		gramsOutput.innerHTML = (weightValue / 0.0022046 ).toFixed(2);
 		ouncesOutput.innerHTML = (weightValue * 16).toFixed(2);
 	}
+
 	else if(chosenOption.selectedIndex == 1){
 
 		ouncesOutput.innerHTML = weightValue;
+
 		kilogramsOutput.innerHTML = (weightValue / 35.274).toFixed(2);
 		poundsOutput.innerHTML = (weightValue * 0.062500 ).toFixed(2);
 		gramsOutput.innerHTML = (weightValue / 0.035274).toFixed(2);
 	}
+
 	else if(chosenOption.selectedIndex == 2 ){
 
 		gramsOutput.innerHTML = weightValue;
@@ -33,6 +38,7 @@ inputWeight.addEventListener('input', function(e){
 		kilogramsOutput.innerHTML = (weightValue * .001).toFixed(2);
 		ouncesOutput.innerHTML = (weightValue * .035).toFixed(2);
 	}
+
     else if(chosenOption.selectedIndex == 3){
     	
 		kilogramsOutput.innerHTML = weightValue;
