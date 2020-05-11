@@ -30,7 +30,7 @@ inputWeight.addEventListener('input', function(e){
 		gramsOutput.innerHTML = (weightValue / 0.035274).toFixed(2);
 	}
 
-	else if(chosenOption.selectedIndex == 2 ){
+	else if(chosenOption.selectedIndex == 2){
 
 		gramsOutput.innerHTML = weightValue;
 
